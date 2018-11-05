@@ -147,8 +147,7 @@ module.exports = {
       .map(ext => `.${ext}`)
       .filter(ext => useTypeScript || !ext.includes('ts')),
     alias: {
-      // Support React Native Web
-      // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
+      AppStyles: path.join(__dirname, '../src/assets/styles/app.scss'),
       'react-native': 'react-native-web',
     },
     plugins: [
