@@ -148,6 +148,7 @@ module.exports = {
       .filter(ext => useTypeScript || !ext.includes('ts')),
     alias: {
       AppStyles: path.join(__dirname, '../src/assets/styles/app.scss'),
+      ConfigureStore: path.join(__dirname, '../src/app/modules/store/configureStore.js'),
       'react-native': 'react-native-web',
     },
     plugins: [
