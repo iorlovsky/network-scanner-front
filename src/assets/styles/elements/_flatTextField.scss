@@ -12,6 +12,9 @@
 }
 
 .field-error-msg {
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
   color: $error-red;
   letter-spacing: .7px;
 }
