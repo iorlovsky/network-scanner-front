@@ -1,9 +1,11 @@
 import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import thunk from "redux-thunk";
-import user from "../reducers/user";
+import {reducer as form} from "redux-form";
+import app from "../reducers/app";
 
 const rootReducer = combineReducers({
-  user,
+  app,
+  form
 });
 
 
@@ -17,5 +19,3 @@ export const configure = (initialState = {}) => {
     )
   );
 };
-
-// export default configure;

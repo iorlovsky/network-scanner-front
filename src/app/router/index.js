@@ -2,7 +2,7 @@ import React from "react";
 import {Route, Switch, Router} from 'react-router-dom';
 import Main from "../components/Main";
 import history from './history';
-import Login from "../pages/Login";
+import Login from "../pages/Signin";
 import Error404 from "../pages/Error404";
 
 

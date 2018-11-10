@@ -1,1 +1,3 @@
-export const FETCH_USER = 'FETCH_USER';
+module.exports = {
+  FETCH_USER: 'FETCH_USER',
+};

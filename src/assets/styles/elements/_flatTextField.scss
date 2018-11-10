@@ -1,0 +1,17 @@
+.flat-text-field, .flat-text-field-error{
+  color: $font-white !important;
+  background: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: 1px solid $panel-header-bg-gray !important;
+}
+
+.flat-text-field-error {
+  border-bottom: 1px solid $error-red !important;
+}
+
+.field-error-msg {
+  color: $error-red;
+  letter-spacing: .7px;
+}
