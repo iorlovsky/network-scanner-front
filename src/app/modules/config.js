@@ -9,3 +9,7 @@ export const axios = axiosBase.create({
     'Content-Type': 'application/json'
   }
 });
+
+export const getAuthHeader = (email, password) => ({
+  Authorization: 'Basic ' + window.btoa(`${email}:${password}`)
+});

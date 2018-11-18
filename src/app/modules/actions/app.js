@@ -1,20 +1,13 @@
-import * as types from "../types";
-import {axios} from '../config';
+import {axios, getAuthHeader} from '../config';
 import * as urls from '../urls';
 
 export const signin = data => {
-  console.log(data)
   return axios ({
+    headers: getAuthHeader(data.email, data.password),
     method: 'post',
-    url: urls.USERS,
-    data
+    url: urls.LOGIN,
   })
     .then((res) => {
       return Promise.resolve(res)
     })
 };
-
-export const fetchUser = data => ({
-  type: types.FETCH_USER,
-  payload: {name:'John', last_name:"Connor"}
-});
