@@ -4,12 +4,14 @@ import {bindActionCreators} from "redux";
 import {signin} from "../modules/actions/app";
 import {Col, Container, Row} from "reactstrap";
 import SigninForm from "../components/SigninForm";
+import history from "../router/history";
+import {ROUTES} from "../common/constants";
 
 class Signin extends React.Component {
 
-  onSubmit = (form) => {
-    console.log(form);
-    signin(form);
+  onSubmit = form => {
+    this.props.signin(form)
+      .then(() => history.push(ROUTES.dashboard))
   };
 
   render() {
@@ -34,5 +36,5 @@ class Signin extends React.Component {
 
 export default connect(
   state => ({}),
-  dispatch => bindActionCreators({}, dispatch)
+  dispatch => bindActionCreators({signin}, dispatch)
 )(Signin);

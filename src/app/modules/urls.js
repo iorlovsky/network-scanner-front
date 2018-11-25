@@ -1,5 +1,6 @@
 module.exports = {
   USERS: 'users/',
-  LOGIN: 'login/'
+  LOGIN: 'login/',
+  SCANNERS: 'scanners/'
 };
 

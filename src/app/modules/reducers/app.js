@@ -1,13 +1,11 @@
 import * as types from "../types";
 
-const initialState = {
-  user: {}
-};
+const initialState = {};
 
 
 const app = (state=initialState, action) => {
   switch (action.type){
-    case types.FETCH_USER:
+    case types.USER_FETCHED:
       return {...state, user:action.payload};
 
     default:
