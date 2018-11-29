@@ -3,6 +3,7 @@ import {Col, Row} from "reactstrap";
 import {fetchNetstat} from "../../modules/actions/scanners";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
+import Loader from "../Loader";
 
 class Netstat extends Component {
   componentWillMount() {
@@ -40,14 +41,7 @@ class Netstat extends Component {
           <Col>Foreign Address</Col>
           <Col>State</Col>
         </Row>
-        {netstat ?
-          this.renderTableBody(netstat) :
-          (
-            <div className='loader-container'>
-              <div className="lds-dual-ring"></div>
-            </div>
-          )
-        }
+        {netstat ? this.renderTableBody(netstat) : <Loader/>}
       </Col>
     )
   }

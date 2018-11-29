@@ -3,6 +3,7 @@ import {Col, Row} from "reactstrap";
 import {fetchIfstat} from "../../modules/actions/scanners";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
+import Loader from "../Loader";
 
 class Ifstat extends Component {
   componentWillMount() {
@@ -37,14 +38,7 @@ class Ifstat extends Component {
           <Col>KB/s in</Col>
           <Col>KB/s out</Col>
         </Row>
-        {ifstat ?
-          this.renderTableBody(ifstat.speed) :
-          (
-            <div className='loader-container'>
-              <div className="lds-dual-ring"></div>
-            </div>
-          )
-        }
+        {ifstat ? this.renderTableBody(ifstat.speed) : <Loader/>}
       </Col>
     )
   }

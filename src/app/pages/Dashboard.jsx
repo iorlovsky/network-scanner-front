@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Netstat from "../components/dashboard/Netstat";
 import Ifstat from "../components/dashboard/Ifstat";
+import CommonInfo from "../components/dashboard/CommonInfo";
 import {Row} from "reactstrap";
 
 class Dashboard extends Component {
@@ -13,6 +14,7 @@ class Dashboard extends Component {
         </Row>
         <Row>
           <Ifstat/>
+          <CommonInfo/>
         </Row>
       </Fragment>
     )
