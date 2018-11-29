@@ -1,31 +1,22 @@
 import React, { Component, Fragment } from 'react';
 import Netstat from "../components/dashboard/Netstat";
+import Ifstat from "../components/dashboard/Ifstat";
 import {Row} from "reactstrap";
-import {connect} from "react-redux";
-import {fetchNetstat} from "../modules/actions/scanners";
-import {bindActionCreators} from "redux";
 
 class Dashboard extends Component {
-  componentWillMount() {
-    this.props.fetchNetstat();
-  }
-
   render() {
-    const netstatData = this.props.netstat;
     return (
       <Fragment>
         <div className='page-header'>Dashboard</div>
         <Row>
-          <Netstat data={netstatData}/>
+          <Netstat/>
+        </Row>
+        <Row>
+          <Ifstat/>
         </Row>
       </Fragment>
     )
   }
 }
 
-export default connect(
-  state => ({
-    netstat: state.scanners.netstat
-  }),
-  dispatch => bindActionCreators({fetchNetstat}, dispatch)
-)(Dashboard);
+export default Dashboard;
