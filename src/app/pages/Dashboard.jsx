@@ -14,7 +14,7 @@ class Dashboard extends Component {
     const netstatData = this.props.netstat;
     return (
       <Fragment>
-        <div>Dashboard</div>
+        <div className='page-header'>Dashboard</div>
         <Row>
           <Netstat data={netstatData}/>
         </Row>

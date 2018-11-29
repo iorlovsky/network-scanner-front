@@ -21,7 +21,7 @@ const Netstat = props => {
     <Col className='panel'>
       <Row className='panel-header'>
         <Col>
-          Netstat
+          Active network connections
         </Col>
       </Row>
       <Row className='panel-row'>
