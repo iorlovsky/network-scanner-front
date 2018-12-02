@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {Col, Row} from "reactstrap";
 import Loader from "../Loader";
+import {addlinebreaks, breakNewLines} from "../../utils/strings";
 
 class Packets extends Component {
   componentWillMount() {
@@ -21,7 +22,7 @@ class Packets extends Component {
         </Row>
         <Row className='panel-row'>
           <Col className='break-work'>
-            {packets_info ? packets_info.raw : <Loader/>}
+            {packets_info ? breakNewLines(addlinebreaks(packets_info.raw)) : <Loader/>}
           </Col>
         </Row>
       </Col>
