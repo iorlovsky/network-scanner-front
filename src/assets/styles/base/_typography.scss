@@ -2,3 +2,7 @@ body{
   font-family: 'Roboto', sans-serif;
   color:$font-white !important;
 }
+
+.break-word{
+  word-break: break-all;
+}

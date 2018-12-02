@@ -5,7 +5,9 @@ module.exports = {
 
   scanners: {
     NETSTAT: 'scanners/netstat/',
-    IFSTAT: 'scanners/ifstat/'
+    IFSTAT: 'scanners/ifstat/',
+    NETWORK_COMMON_INFO: 'scanners/network-common-info/',
+    PACKETS_INFO: 'scanners/packets-info'
   }
 };
 

@@ -29,11 +29,9 @@ class Ifstat extends Component {
             Interface activity
           </Col>
         </Row>
-        {ifstat &&
-          <Row className='panel-row'>
-            <Col>Interface: {ifstat.interface}</Col>
-          </Row>
-        }
+        <Row className='panel-row'>
+          <Col>Interface: {ifstat ? ifstat.interface : <Loader size='sm'/>}</Col>
+        </Row>
         <Row className='panel-row'>
           <Col>KB/s in</Col>
           <Col>KB/s out</Col>
@@ -49,4 +47,4 @@ export default connect(
     ifstat: state.scanners.ifstat
   }),
   dispatch => bindActionCreators({fetchIfstat}, dispatch)
-) (Ifstat);
+)(Ifstat);
